@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Geld in Bierkisten</h1>
+        <p>Umrechnung deines Geldes in Bierkisten</p>
+        <input id = "Eingabe" type = "text"/>
+        <input type="button" value="Ausgabe" onClick="calc()">
+        <br>
+        <br>
+        Deine Kisten:
+        <p id = "Rückgabe"></p>
+
+
+    <body>
+
+        <script>
+            function calc() {
+            ausgabe = document.getElementById("Rückgabe")
+            input = document.getElementById("Eingabe")
+            ausgabe.innerText = input.value * 12
+            }
+
+
+        </script>
+
+
+    </body>
+
+    </head>
+
+
+</html>
