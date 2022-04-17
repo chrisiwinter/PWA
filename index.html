@@ -19,8 +19,12 @@
             input = document.getElementById("Eingabe")
             ausgabe.innerText = input.value * 12
             }
-
-
+            
+            if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+            .then(function() { console.log("Service worker registered"); });
+            }
+            
         </script>
 
 
