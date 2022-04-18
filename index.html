@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
+        <title>Winter</title>
+        <link rel="manifest" href="./manifest.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff">
+    </head>
+        
+
+
+    <body>
+
         <h1>Geld in Bierkisten</h1>
         <p>Umrechnung deines Geldes in Bierkisten</p>
         <input id = "Eingabe" type = "text"/>
@@ -10,27 +21,23 @@
         Deine Kisten:
         <p id = "Rückgabe"></p>
 
-
-    <body>
-
-        <script>
-            function calc() {
-            ausgabe = document.getElementById("Rückgabe")
-            input = document.getElementById("Eingabe")
-            ausgabe.innerText = input.value * 12
-            }
-            
-            if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js')
-            .then(function() { console.log("Service worker registered"); });
-            }
-            
-        </script>
-
-
     </body>
 
-    </head>
+    <script>
+        function calc() {
+            ausgabe = document.getElementById("Rückgabe")
+            input = document.getElementById("Eingabe")
+            ausgabe.innerText = input.value / 12
+        }
+        
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+            .then(function() { console.log("Service worker registered"); });
+        }
+        
+    </script>
+
+
 
 
 </html>
